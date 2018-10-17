@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+
+  jupyter:
+    image: dbmi/r-datascience-notebook:nhanes-pic-sure-notebook-development-only-August-20-2018
+    restart: always
+    depends_on:
+      - pic-sure-hpds-nhanes
+    networks:
+      - public
+    expose:
+      - 8888
+    ports:
+      - 80:8888
+    volumes:
+      - ./jupyter-notebooks:/home/jovyan/work
+
+  pic-sure-hpds-nhanes:
+    image: dbmi/pic-sure-hpds:nhanes-pic-sure-hpds-NaN-fix
+    restart: always
+    networks:
+      - public
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+
+networks:
+  public:
+
+
+
