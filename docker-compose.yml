@@ -11,12 +11,12 @@ services:
     expose:
       - 8888
     ports:
-      - 80:8888
+      - 81:8888
     volumes:
       - ./jupyter-notebooks:/home/jovyan/work
 
   pic-sure-hpds-nhanes:
-    image: dbmi/pic-sure-hpds:nhanes-pic-sure-hpds-NaN-fix
+    image: dbmi/pic-sure-hpds-nhanes:Oct-24-2018-ResultInstanceId_41_enc
     restart: always
     networks:
       - public
