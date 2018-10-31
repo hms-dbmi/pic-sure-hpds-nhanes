@@ -54,14 +54,15 @@ serve them in order until it completes all of them.
 For production deployments, the system can be configured to serve multiple requests
 at once, but this repository is intended to be used on your laptop or desktop.
 
-The micro environment is very conservative with RAM and CPU usage. This environment
+The micro environment is very conservative with RAM usage. This environment
 will take minutes to return you all the data at once. The performance is directly
 related to how many concepts you select in a given query.
 
-The full speed environment is very greedy with CPU usage. It uses about 2 GB of
-RAM and giving it more than that will not provide any further speed increase.
-The only way to speed up the full speed environment is by adding more cores or
-by using faster cores.
+The full speed environment is very greedy with CPU usage, but is limited by IO. 
+It uses about 2 GB of RAM and giving it more than that will not provide any 
+further speed increase. The only way to speed up the full speed environment is 
+by getting faster CPUs, more cores, or in the case that you already have a modern
+8 core CPU, getting a faster hard drive.
 
 
 To start the environment in full speed mode just run:
