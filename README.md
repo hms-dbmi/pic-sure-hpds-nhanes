@@ -40,7 +40,9 @@ during processing.
 
 Instructions:
 
-This repo comes with 2 files that can be used to configre the research environment.
+This repo comes with 7 files that can be used to configre the research environment.
+
+.env_<some number> is set to use <some number> of megabytes of RAM.
 
 .env_full_speed is set to serve queries as fast as possible given the CPU that you have. 
 
