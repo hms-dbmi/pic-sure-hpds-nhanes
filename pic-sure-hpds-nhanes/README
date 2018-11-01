@@ -1,0 +1,15 @@
+NHANES PIC-SURE HPDS
+--------------------
+
+This Docker service build contains a full dump of the i2b2/tranSMART NHANES database
+which is retrieved from the Oracle image tagged:
+
+dbmi/i2b2transmart-db:oracle.12.2.0.1-ee-i2b2.1.7.09-tm.release-18.1-v.1.3-nhanes
+
+The Dockerfile assumes this image is running on 192.168.99.100
+
+The data in the HPDS image will be encrypted using a GPG key that you must provide
+as the file gpg_pub_key.asc
+
+
+
